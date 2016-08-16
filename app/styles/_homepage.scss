@@ -1,0 +1,15 @@
+// =========================================
+// Homepage
+// =========================================
+
+.homepage-upper {
+  background-color: get-color("ultra-light", $gray);
+  padding: 70px 0;
+
+  .heading {
+    @include alt-heading("large");
+    width: 600px;
+    margin: 0px auto;
+    text-align: center;
+  }
+}

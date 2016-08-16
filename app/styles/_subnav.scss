@@ -1,0 +1,15 @@
+// =========================================
+// Subnav
+// =========================================
+
+@include subnav(
+  $background-color: get-color("core", $blue),
+  $text-color: #FFF,
+  $hover-color: get-color("ultra-light", $gray),
+  $border-color: get-color("dark", $gray)
+);
+
+.subnav-tag-beta {
+  cursor: default;
+  margin-left: 10px;
+}

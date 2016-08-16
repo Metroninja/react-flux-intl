@@ -1,0 +1,11 @@
+web:
+  build: .
+  env_file:
+    - config/development.env
+  ports:
+    - "3000:3000"
+    - "3002:3002"
+  volumes:
+    - .:/src
+
+  command: npm run start-dev

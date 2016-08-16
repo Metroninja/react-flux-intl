@@ -1,0 +1,16 @@
+// =========================================
+// Core - Functions
+// =========================================
+
+// Merge multiple maps.
+//
+// example usage:
+//    $combined: join-maps($map1, $map2, $map3);
+//
+@function join-maps($maps...) {
+  $merged: ();
+  @each $map in $maps {
+    $merged: map-merge($merged, $map);
+  }
+  @return $merged;
+}

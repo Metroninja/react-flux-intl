@@ -1,0 +1,33 @@
+.alerts-block {
+  .alert-inline {
+    display: flex;
+    justify-content: center;
+
+    .alert-icon {
+      flex-shrink: 0;
+      align-self: center;
+    }
+  }
+  .alert-fixed {
+    position: fixed;
+    left: 0px;
+    min-height: 50px;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-top: 2px solid get-color('xxtra-light', $gray);
+    z-index: 2;
+
+    &.bottom {
+      bottom: 0px;
+    }
+    .alert-content {
+      width: 100%;
+      
+      .loading-content {
+        min-height: 0px;
+        margin: 0px;
+      }
+    }
+  }
+}

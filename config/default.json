@@ -1,0 +1,14 @@
+{
+  "assets": {
+    "compilePath": "public",
+    "entryScript" : "app/client.jsx",
+    "manifest": "asset-manifest.json",
+    "scripts": {
+      "polyfill": "//cdn.polyfill.io/v2/polyfill.min.js"
+    }
+  },
+  "locale": {
+    "code": "en-US",
+    "language": "en"
+  }
+}

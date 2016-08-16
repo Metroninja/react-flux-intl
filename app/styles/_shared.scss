@@ -1,0 +1,131 @@
+// =========================================
+// shared
+// =========================================
+body {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+#main {
+  flex: 1 0 auto;
+}
+.layout-upper {
+  padding: 20px;
+}
+.pointer {
+  cursor: pointer;
+}
+.link {
+  cursor: pointer;
+  color: get-color('medium-dark', $blue);
+  svg {
+    margin-left: 5px;
+    fill: get-color('light', $blue);
+  }
+}
+.strong {
+  font-weight: bold;
+}
+.subnav-items > .item.active a.link-line:after {
+    background-color: get-color('dark', $blue);
+}
+.core-blue {
+  color: get-color('core', $blue);
+  fill: get-color('core', $blue);
+}
+
+svg {
+  &.x-small {
+    width: 14px;
+    height: 14px;
+  }
+}
+.icon-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid get-color('xxtra-light', $gray);
+  border-radius: 2px;
+  padding: 5px;
+  cursor: pointer;
+}
+.icon-plus {
+  height: 30px;
+  width: 30px;
+  fill: get-color('xtra-light', $gray);
+
+  &.small {
+    height: 22px;
+    width: 22px;
+  }
+}
+
+.img-overlay{
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-grow: 0  !important;
+  margin-right: 10px;
+  svg {
+    position: absolute;
+    right: -5px;
+    bottom: -6px;
+  }
+}
+.loading-content {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0px auto;
+  min-height: 250px;
+}
+.align {
+  display: flex;
+  align-items: center;
+
+  .right-content {
+    margin-left: auto;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.pagination-upper .pagination-primary {
+  margin-left: 10px;
+}
+.col-one-fifth {
+  width: calc(20% - 15px);
+}
+.tabs-primary {
+
+  li > a {
+    padding: 15px;
+    margin: -15px;
+  }
+}
+.circle {
+  border-radius: 50%;
+}
+.icon-moz-info-superscript {
+  fill: get-color('xtra-light', $gray);
+}
+.underline {
+  text-decoration: underline;
+}
+.button-primary + .link {
+  margin-left: 15px;
+}
+
+@media print {
+  html {
+    zoom: 66%;
+  }
+  #globalnav,
+  #globalfooter, 
+  .subnav,
+  .layout-upper,
+  .hide-print {
+    display: none !important;
+  }
+}
+

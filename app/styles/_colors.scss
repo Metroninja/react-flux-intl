@@ -1,0 +1,157 @@
+// =========================================
+// Core - Colors
+// =========================================
+
+$gray: (
+  "xtra-dark": #272733,
+  "dark": #32353E,
+  "medium-dark": #424A4F,
+  "core": #5D6769,
+  "medium-light": #778283,
+  "light": #99A2A3,
+  "xtra-light": #BCC5C5,
+  "xxtra-light": #DBE3E3,
+  "ultra-light": #F0F7F7,
+) !global;
+
+$blue: (
+  "xtra-dark": #044154,
+  "dark": #1D6B87,
+  "medium-dark": #3594BA,
+  "core": #4DBDEB,
+  "medium-light": #6BCAEF,
+  "light": #89D6F3,
+  "xtra-light": #A6E2F7,
+  "xxtra-light": #C4EFFB,
+  "ultra-light": #E1FBFF,
+) !global;
+
+$teal: (
+  "xtra-dark": #06352D,
+  "dark": #207163,
+  "medium-dark": #3BAE98,
+  "core": #54E8CC,
+  "medium-light": #70EDD4,
+  "light": #8CF1DC,
+  "xtra-light": #A7F6E4,
+  "xxtra-light": #C3FAEC,
+  "ultra-light": #DEFFF4,
+) !global;
+
+$green: (
+  "xtra-dark": #135419,
+  "dark": #317E2B,
+  "medium-dark": #4EA93C,
+  "core": #6BD24D,
+  "medium-light": #84DB69,
+  "light": #9DE486,
+  "xtra-light": #B6EDA2,
+  "xxtra-light": #D0F6BE,
+  "ultra-light": #E8FFD9,
+) !global;
+
+$purple: (
+  "xtra-dark": #2F2751,
+  "dark": #574981,
+  "medium-dark": #7E6CB1,
+  "core": #A58DE0,
+  "medium-light": #B5A2E6,
+  "light": #C6B6EB,
+  "xtra-light": #D6CBF1,
+  "xxtra-light": #E6DFF7,
+  "ultra-light": #F6F3FC,
+) !global;
+
+$red: (
+  "xtra-dark": #681A2B,
+  "dark": #9B2E39,
+  "medium-dark": #CE4247,
+  "core": #F55,
+  "medium-light": #FF7576,
+  "light": #FF9496,
+  "xtra-light": #FFB3B6,
+  "xxtra-light": #FFD2D6,
+  "ultra-light": #FFEFF4,
+) !global;
+
+$orange: (
+  "xtra-dark": #994122,
+  "dark": #BA6536,
+  "medium-dark": #DC8A4A,
+  "core": #FCAD5E,
+  "medium-light": #FDBC7B,
+  "light": #FDCB99,
+  "xtra-light": #FEDAB6,
+  "xxtra-light": #FEE8D3,
+  "ultra-light": #FFF7EF,
+) !global;
+
+$yellow: (
+  "xtra-dark": #AD7327,
+  "dark": #C9933B,
+  "medium-dark": #E4B34F,
+  "core": #FFD262,
+  "medium-light": #FFDA7D,
+  "light": #FFE198,
+  "xtra-light": #FFE8B2,
+  "xxtra-light": #FFF0CD,
+  "ultra-light": #FFF7E7,
+) !global;
+
+$grayscale: (
+  "gray05": darken(#FFF, 05%),
+  "gray10": darken(#FFF, 10%),
+  "gray15": darken(#FFF, 15%),
+  "gray20": darken(#FFF, 20%),
+  "gray25": darken(#FFF, 25%),
+  "gray30": darken(#FFF, 30%),
+  "gray35": darken(#FFF, 35%),
+  "gray40": darken(#FFF, 40%),
+  "gray45": darken(#FFF, 45%),
+  "gray50": darken(#FFF, 50%),
+  "gray55": darken(#FFF, 55%),
+  "gray60": darken(#FFF, 60%),
+  "gray65": darken(#FFF, 65%),
+  "gray70": darken(#FFF, 70%),
+  "gray75": darken(#FFF, 75%),
+  "gray80": darken(#FFF, 80%),
+  "gray85": darken(#FFF, 85%),
+  "gray90": darken(#FFF, 90%),
+  "gray95": darken(#FFF, 95%),
+) !global;
+
+$colors: (
+  "gray": $gray,
+  "blue": $blue,
+  "teal": $teal,
+  "green": $green,
+  "purple": $purple,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+) !global;
+
+@function color-shade($shade) {
+  $merged: ();
+  @each $color, $map in $colors {
+    $value: ($color: map-get($map, $shade));
+    $merged: map-merge($merged, $value);
+  }
+  @return $merged;
+}
+
+@function get-color($color, $color-map) {
+  @return map-get($color-map, $color);
+}
+
+$xtra-dark-colors: color-shade("xtra-dark");
+$dark-colors: color-shade("dark");
+$medium-dark-colors: color-shade("medium-dark");
+$core-colors: color-shade("core");
+$medium-light-colors: color-shade("medium-light");
+$light-colors: color-shade("light");
+$xtra-light-colors: color-shade("xtra-light");
+$xxtra-light-colors: color-shade("xxtra-light");
+$ultra-light-colors: color-shade("ultra-light");
+
+$helper-colors: join-maps($core-colors) !global;

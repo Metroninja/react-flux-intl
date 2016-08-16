@@ -1,0 +1,74 @@
+
+// =========================================
+// Animations
+// =========================================
+
+@mixin animation-spin() {
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin modal-fade-in() {
+  @keyframes modal-fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.8;
+    }
+  }
+}
+
+@mixin animations {
+  @include animation-spin();
+}
+//Dropdown menu and expanded items
+.dropdown-menu-enter, .menu-enter {
+  max-height: 0 !important;
+  transition: max-height .3s;
+}
+
+.dropdown-menu-enter-active, .menu-enter {
+  max-height: 400px !important;
+}
+
+.dropdown-menu-leave, .menu-enter {
+  max-height: 400px !important;
+  transition: max-height .1s;
+}
+
+.dropdown-menu-leave-active, .menu-enter {
+  max-height: 0 !important;
+}
+
+// Alerts
+
+.alerts-enter {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s, max-height 0.4s;
+}
+
+.alerts-enter-active {
+  max-height: 200px !important;
+  opacity: 1 !important;
+}
+
+.alerts-leave {
+  max-height: 200px !important;
+  opacity: 1 !important;
+  transition: opacity 0.2s, max-height 0.4s;
+}
+
+.alerts-leave-active {
+  max-height: 0 !important;
+  opacity: 0 !important;
+}
