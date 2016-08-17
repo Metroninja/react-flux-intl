@@ -2,31 +2,20 @@
  * Routes
  **/
 
+//routes for the app, all supported paths
 const app = {
   INDEX: '/',
   DASHBOARD: '/dashboard',
-  EXPORTS: '/exports',
-  MENTIONS: '/mentions',
-  SAVED_USER_LIST: '/list',
-  USER_ANALYSIS: '/user-analysis',
-  USER_COMPARE: '/user-compare',
-  USER_OVERVIEW: '/user-overview',
-  PROFILE_SEARCH: '/profile-search',
-  SOCIAL_GRAPH: '/social-graph',
+  DOWNLOADS: '/downloads',
 };
 
+/**
+* routes for whatever api you will be connecting to
+* there is obviously no api with this app, this is just 
+* here as an example
+*/
 const api = {
-  COMPARE: '/compare',
-  DASHBOARD: '/dashboard',
-  EXPORTS: '/exports',
-  FOLLOWS: '/twitter/follows',
-  PROFILE: '/profile',
-  PROFILE_SEARCH: '/bio',
-  SOCIAL_GRAPH: '/sort',
-  TWITTER: '/twitter/profile',
-  TRACKED: '/twitter/competitor',
-  USER_ANALYSIS: '/analyze',
-  USER_OVERVIEW: '/track',
+  GET_SOMETHING: '/get/something',
 };
 
 export default { app, api };

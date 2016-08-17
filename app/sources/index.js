@@ -1,18 +1,8 @@
 
 import { AppStore } from 'app/stores/index.js';
 
-export CompareSource from './compare';
-export DailyActivitySource from './dailyActivity';
-export ExportsSource from './exports';
-export MentionsSource from './mentions';
-export PdfSource from './pdf';
-export ProfileSource from './profile';
-export ProfileSearchSource from './profileSearch';
-export SegmentSource from './segment';
-export SocialGraphSource from './socialGraph';
-export TwitterSource from './twitter';
-export UserAnalysisSource from './userAnalysis';
-export UserOverviewSource from './userOverview';
+export PretendSource from './pretend';
+export DownloadsSource from './downloads';
 
 
 

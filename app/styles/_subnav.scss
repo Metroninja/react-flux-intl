@@ -2,13 +2,33 @@
 // Subnav
 // =========================================
 
-@include subnav(
-  $background-color: get-color("core", $blue),
-  $text-color: #FFF,
-  $hover-color: get-color("ultra-light", $gray),
-  $border-color: get-color("dark", $gray)
-);
+.subnav {
+    font-family: Lato,Helvetica Neue,Helvetica,Arial,"sans-serif";
+    font-weight: 400;
+    background-color: #4dbdeb;
+    color: #fff;
+    font-size: 14px;
+    height: 60px;
+    line-height: 60px;
 
+    .container {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      width: 1180px;
+    }
+    .subnav-items {
+      margin-left: auto;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      .item {
+        padding: 0px 20px;
+      }
+    }
+}
 .subnav-tag-beta {
   cursor: default;
   margin-left: 10px;

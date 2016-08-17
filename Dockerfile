@@ -7,7 +7,7 @@ RUN npm install -g webpack nodemon --silent
 ENV SOURCE /src
 ENV NODE_PATH=$SOURCE
 
-ENV APP_PORT=3000
+ENV APP_PORT=3001
 EXPOSE $APP_PORT
 
 WORKDIR $SOURCE

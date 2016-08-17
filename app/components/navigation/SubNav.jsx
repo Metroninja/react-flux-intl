@@ -24,22 +24,6 @@ export default class SubNav extends Component {
     };
   }
 
-  renderDashboard(){
-    if(!isEmpty(this.props.user)){
-      return <NavItem to={routes.app.DASHBOARD}><Text message="DASHBOARD" /></NavItem>
-    } else {
-      return null;
-    }
-  }
-
-  renderExports(){
-    if(!isEmpty(this.props.user)){
-      return <NavItem to={routes.app.EXPORTS}><Text message="EXPORTS_HEADER" /></NavItem>
-    } else {
-      return null;
-    }
-  }
-
   render() {
     return (
       <nav className="subnav">
@@ -47,12 +31,10 @@ export default class SubNav extends Component {
           <h3 className="subnav-title">
             <Link to="/" message="APP_TITLE"></Link>
           </h3>&nbsp;
-          <span className="tag-standard orange subnav-tag-alpha">ALPHA</span>
+          <span className="tag-standard orange subnav-tag-alpha">Demo</span>
           <ul className="subnav-items">
             <li className="item help">
-              <a href="http://moz.com/help">
-                <Icon name="moz-help">help</Icon>
-              </a>
+              <NavItem to={routes.app.DASHBOARD}><Text message="DASHBOARD" /></NavItem>
             </li>
           </ul>
         </div>
